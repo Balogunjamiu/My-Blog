@@ -15,7 +15,7 @@ exports[`should render header correctly 1`] = `
         to="/dashboard"
       >
         <h1>
-          BoilerPlate
+          My Blog
         </h1>
       </Link>
       <button

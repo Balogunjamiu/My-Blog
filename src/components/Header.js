@@ -9,7 +9,7 @@ import {startLogout } from '../actions/auth'
             <div className="header__content">
 
         <Link className="header__title" to="/dashboard" >
-        <h1>BoilerPlate</h1>
+        <h1>My Blog</h1>
         </Link>
         <button className="button button__link" onClick={startLogout}>Logout</button>
             </div>

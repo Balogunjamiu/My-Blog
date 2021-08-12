@@ -1,9 +1,13 @@
 import React from 'react'
-
-
+import PostList from './PostList'
+import PostListsFilter from './PostFiltersList'
+import PostSummary from './PostSummary'
 export const DashBoardPage = () =>(
     <div>
-       Dashboard page content
+        <PostSummary />
+        <PostListsFilter />
+       <PostList />
+
     </div>
 )
 export default DashBoardPage
