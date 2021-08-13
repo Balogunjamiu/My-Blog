@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import AppRouter, {history} from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css';
-// import { startSetExpenses } from './actions/expenses';
+ import { startSetPosts } from './actions/Posts';
 import { login, logout} from './actions/auth'
 import './styles/style.scss';
 import 'react-dates/lib/css/_datepicker.css'
@@ -32,10 +32,12 @@ const jsx = (
 firebase.auth().onAuthStateChanged((user)=>{
     if (user){
         store.dispatch(login(user.uid))
-        renderApp()
-            if(history.location.pathname === '/'){
-                history.push('/dashboard')
-            }
+        store.dispatch(startSetPosts()).then(()=>{
+            renderApp()
+                if(history.location.pathname === '/'){
+                    history.push('/dashboard')
+                }
+        })
     }else{
         store.dispatch(logout())
         renderApp()
@@ -43,6 +45,3 @@ firebase.auth().onAuthStateChanged((user)=>{
     }
 })
 
-// store.dispatch(startSetExpenses()).then(()=>{
-    
-// })

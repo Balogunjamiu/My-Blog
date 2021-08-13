@@ -13,3 +13,7 @@
         margin: 0 25px 0 0;
     }
  }
+ .round{
+     @extend .input-group__item;
+     border-radius: 10px;
+ }

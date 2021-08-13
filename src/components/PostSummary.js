@@ -4,10 +4,8 @@ import {Link} from 'react-router-dom'
 
 export default()=>(
     <div className="content-container">
-        <div>
-        <Link to='/create'>
-        <p>Add Post</p>
-        </Link>
+        <div className="page-header__action">
+        <Link to='/create' className="button"> Add Post</Link>
         </div>
         
     </div>

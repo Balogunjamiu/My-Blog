@@ -8,7 +8,7 @@ export default class PostForm extends React.Component{
         this.state = {
             title: props.post ? props.post.title : '',
             body: props.post ? props.post.body :  '',
-            createdAt: props.post ? moment(props.ExpenseForm.createdAt): moment(),
+            createdAt: props.post ? moment(props.post.createdAt): moment(),
             calendarFocus:true,
             error:''
         }

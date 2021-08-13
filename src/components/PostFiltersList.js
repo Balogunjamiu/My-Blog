@@ -27,16 +27,19 @@ import {setTextFilter, sortByDate, sortByTitle, setStartDate, setEndDate} from '
     render(){
         return(
             <div className="content-container">
-                    <div>
+                    <div className="input-group">
+                        <div className=" round">                       
                         <input
                          type="text"
+                         className="text-input round"
                          placeholder="search post"
                          value={this.props.filters.text}
                          onChange={this.onTextChange}
                          />
                     </div>
-                    <div>
+                    <div className="input-group__item">
                         <select
+                        className="select_pick"
                         value={this.props.filters.sortBy}
                         onChange={this.onSortBy}
                         >
@@ -58,7 +61,8 @@ import {setTextFilter, sortByDate, sortByTitle, setStartDate, setEndDate} from '
                 startDateId={'start'}
                 endDateId={'end'}
                 /></div>
-            </div>            
+            </div> 
+            </div>          
         )
     }
 }
